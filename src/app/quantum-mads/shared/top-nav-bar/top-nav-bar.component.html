@@ -1,0 +1,82 @@
+<!-- <nav class="wrapper">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Quantum-Mads</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+        </ul>
+    </div>
+</nav> -->
+<style>
+    .borderlines {
+        border: 1px solid #494f57;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="container-fluid p-0 m-0 main_content">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2 borderlines">
+                    <div class="size pt-1">Q-Crypto</div>
+                </div>
+                <div class="col-md-5  py-3 borderlines exchangeMenu">
+                    <div class="d-flex">
+                        <small class="pr-2">Exchange:</small>
+                        <div class="fontcolor">
+                            <div><i class="fa fa-gg" aria-hidden="true"></i> BINANCE</div>
+                        </div>
+                        <i class="ml-4 pt-1 fa fa-angle-down fa-lg" aria-hidden="true"></i>
+                    </div>
+                    <ul class="dropdown-menu w-100 p-0" role="menu">
+                        <div class="dropcolor">
+                            <tr class="d-flex">
+                                <div class="col p-2 spanactive">KUCOIN</div>
+                                <div class="col p-2">BINANCE</div>
+                                <div class="col p-2">Kraken</div>
+                                <div class="col p-2">Huobi</div>
+                                <div class="col p-2">Kraken</div>
+                            </tr>
+                            <tr class="d-flex">
+                                <div class="col p-2">BINANCE</div>
+                                <div class="col p-2">KUCOIN</div>
+                                <div class="col p-2">BITIFINEX</div>
+                                <div class="col p-2">Huobi</div>
+                                <div class="col p-2">KUCOIN</div>
+                            </tr>
+                            <tr class="d-flex">
+                                <div class="col p-2">Kraken</div>
+                                <div class="col p-2">Huobi</div>
+                                <div class="col p-2">BINANCE</div>
+                                <div class="col p-2">KUCOIN</div>
+                                <div class="col p-2">BITIFINEX</div>
+                            </tr>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-md-1 py-3 txt-cen borderlines" (mouseleave)="mouseLeave()">
+                    <div (mouseenter)="mouseEnter()">
+                        <div class="">
+                            <ngx-flag-picker [selectedCountryCode]="selectedCountryCode" [countryCodes]="countryCodes" [showFlags]="true" (changedCountryCode)="changeSelectedCountryCode($event)">
+                            </ngx-flag-picker>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex borderlines">
+                    <div class="col-md-2 py-3 txt-color">
+                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="col-md-5 py-3 d-flex txt-color">
+                        <img src="../../assets/unnamed.jpg" class="rounded-circle" alt="image"><span class="pt-1 pl-2">Jacob Moore</span>
+                    </div>
+                    <div class="py-3">
+                        <button class="btn btn-sm px-3 btn-outline-secondary txt-color" style="border: 1px solid;"><i class="fa fa-sign-out fa-lg mr-2" aria-hidden="true"></i>Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --text-shadow-color: #caccce;
+    --text-light-color: #808f9e;
+    --text-green: #0996a0;
+    --text-yellow: #f5b300;
+    --text-pink: #ec3aa4;
+    --bg-color: #22272e;
+    --bg-light-color: #37414d;
+    --bg-light-color-1: #293038;
+    --border-color: #494f57;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+    background: var(--bg-color) !important;
+}
+
+.list-country-flags {
+    color: #ffff;
+    background: #22272e !important;
+    margin-top: 25px !important;
+    margin-left: -27px;
+    border: 1px solid var(--border-color) !important;
+    width: 116px !important;
+    text-align: center;
+}
+
+.list-country-flags .country-flag {
+    padding: 10px !important;
+}
+
+ngx-flag-picker {
+    width: 100% !important;
+}
+
+.country-flag:hover {
+    color: #ec3aa4 !important;
+}
+
+// .country-flag {
+//     color: #fff;
+// }
+.txt-color:hover {
+    color: #ec3aa4;
+}
