@@ -7,6 +7,8 @@ import { SideNavBarComponent } from './shared/side-nav-bar/side-nav-bar.componen
 import { QuantumMadsComponent } from './quantum-mads.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgxFlagPickerModule } from 'ngx-flag-picker';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 
 
 
@@ -15,7 +17,8 @@ import { NgxFlagPickerModule } from 'ngx-flag-picker';
   imports: [
     CommonModule,
     NgxFlagPickerModule ,
-    QuantumMadsRoutingModule
+    QuantumMadsRoutingModule,
+    NgApexchartsModule
   ]
 })
 export class QuantumMadsModule { }
