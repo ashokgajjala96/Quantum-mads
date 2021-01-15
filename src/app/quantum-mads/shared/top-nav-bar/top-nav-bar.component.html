@@ -12,6 +12,8 @@
 <style>
     .borderlines {
         border: 1px solid #494f57;
+        height: 48px;
+        cursor: pointer;
     }
 </style>
 
@@ -66,13 +68,21 @@
                 </div>
                 <div class="col-md-4 d-flex borderlines">
                     <div class="col-md-2 py-3 txt-color">
-                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <i class="fa fa-bell-o" style="position: absolute;" aria-hidden="true"></i>
+                        <i class="fa fa-circle fa-sm" aria-hidden="true"></i>
                     </div>
 
-                    <div class="col-md-5 py-3 d-flex txt-color">
-                        <img src="../../assets/unnamed.jpg" class="rounded-circle" alt="image"><span class="pt-1 pl-2">Jacob Moore</span>
+                    <div class="col-md-5 py-2 d-flex txt-color">
+                        <div class="">
+                            <img src="../../assets/unnamed.jpg" class="rounded-circle" alt="image">
+
+                        </div>
+                        <div class="py-1">
+                            <span class="pl-2">Jacob Moore</span>
+                        </div>
+
                     </div>
-                    <div class="py-3">
+                    <div class="py-2 pl-4">
                         <button class="btn btn-sm px-3 btn-outline-secondary txt-color" style="border: 1px solid;"><i class="fa fa-sign-out fa-lg mr-2" aria-hidden="true"></i>Logout</button>
                     </div>
                 </div>

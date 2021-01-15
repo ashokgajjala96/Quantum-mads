@@ -1,14 +1,27 @@
-// .wrapper {
-//     position: sticky;
-//     top: 0;
-//     z-index: 9999;
-// }
+.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
 .wrapper .main_content {
     width: 100%;
     background: #22272e;
     color: #bdb8d7;
     padding: 20px;
     // border-bottom: 1px solid #e0e4e8;
+}
+
+.fa-sm {
+    font-size: 9px;
+    position: absolute;
+    padding-left: 8px;
+    color: var(--text-pink);
+    cursor: pointer;
+}
+
+.fa-sm:hover {
+    color: #fff;
 }
 
 .size {
@@ -60,6 +73,7 @@ tr div:hover,
     background-color: unset !important;
     margin-top: -1px;
     border: 1px solid #494f57;
+    cursor: pointer;
 }
 
 .default {

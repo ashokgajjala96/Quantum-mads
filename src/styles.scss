@@ -29,10 +29,10 @@ body {
 .list-country-flags {
     color: #ffff;
     background: #22272e !important;
-    margin-top: 25px !important;
+    margin-top: 6px !important;
     margin-left: -27px;
     border: 1px solid var(--border-color) !important;
-    width: 116px !important;
+    width: 113px !important;
     text-align: center;
 }
 
@@ -42,6 +42,10 @@ body {
 
 ngx-flag-picker {
     width: 100% !important;
+}
+
+.country-flag {
+    color: #fff;
 }
 
 .country-flag:hover {

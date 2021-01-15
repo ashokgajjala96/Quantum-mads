@@ -21,23 +21,21 @@
     position: fixed;
 }
 
-.wrapper .sidebar ul li {
+.wrapper .sidebar div {
     padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    // border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.wrapper .sidebar ul li {
+.wrapper .sidebar div {
     color: #bdb8d7;
     display: block;
 }
 
-.wrapper .sidebar ul li .fa {
+.wrapper .sidebar div .fa {
     width: 30px;
+    text-align: center;
 }
 
-.wrapper .sidebar ul li:hover {
+.wrapper .sidebar div:hover {
     color: #fff;
 }
 
