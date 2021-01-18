@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
   @ViewChild('chart') chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
+  public isBitcoinActive=false;
   constructor() {
     this.chartOptions = {
       series: [
@@ -322,16 +323,16 @@ export class DashboardComponent implements OnInit {
       annotations: {
         yaxis: [
           {
-            y: 6496,
-            borderColor: '#00E396',
+            y: 6518,
+            borderColor: '#E4E5E6',
           },
           {
-            y: 6538,
-            borderColor: '#00E396',
+            y: 6507,
+            borderColor: '#ec3aa4',
           },
           {
             y: 6480,
-            borderColor: '#00E396',
+            borderColor: ' #0996a0',
           },
         ],
       },
@@ -363,6 +364,9 @@ export class DashboardComponent implements OnInit {
     return series;
   }
 
+public toggleBitcoin(){
+  this.isBitcoinActive= ! this.isBitcoinActive;
+}
   ngOnInit(): void {}
 }
 
