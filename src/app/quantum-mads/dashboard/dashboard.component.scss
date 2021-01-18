@@ -115,6 +115,9 @@ p {
 .btc-menu:hover {
     color: var(--text-pink);
 }
+.btn-menu-active{
+    color: var(--text-pink) !important;
+}
 
 .btc-menu,
 .btc-menu-list {
@@ -172,6 +175,9 @@ button:focus {
 
 .btn-outline:focus {
     border: 1px solid var(--text-green);
+}
+.profit_loss{
+    border: 1px double var(--text-green);
 }
 
 /* .btn-outline:active{

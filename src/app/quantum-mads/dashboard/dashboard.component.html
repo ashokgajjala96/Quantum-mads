@@ -13,11 +13,12 @@
             <div>
                 <div class="dropdown ">
                     <button class="btn btc-menu layout-header" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleBitcoin()"
+                        [class.btn-menu-active]="isBitcoinActive">
                         <img src="/assets/bitcoin.png" alt=""> BTC - Bitcoin<i class="fa fa-angle-down fa-lg  ml-80px"
                             aria-hidden="true"></i>
                     </button>
-                    <ul class="dropdown-menu btc-menu-list layout-header" aria-labelledby="dropdownMenuButton">
+                    <ul class="dropdown-menu btc-menu-list layout-header" aria-labelledby="dropdownMenuButton" (click)="toggleBitcoin()">
                         <li class="dropdown-item ">
                             <img src="/assets/ethereum.png" alt=""> ETH - Ethereum
                         </li>
@@ -52,7 +53,7 @@
             <div class="row d-flex justify-content-between mx-1">
                 <div class="text-white ">
                   <small>
-                    <i class="fa fa-dot-circle-o price-color mr-1" aria-hidden="true"></i> Strategy No1
+                    <i class="fa fa-dot-circle-o price-color mr-1" aria-hidden="true"></i> Strategy N<sup><u>o</u></sup>1
                   </small>  
                 </div>
                 <div class='d-flex'>
@@ -70,7 +71,7 @@
                     </div>
                     <div class='mr-3'>
                         <div class="btn-group">
-                            <button class="btn px-4  btn-outline " aria-current="profit and loss" autofocus>Profit and
+                            <button class="btn px-4  btn-outline profit_loss" aria-current="profit and loss" autofocus>Profit and
                                 Loss</button>
                             <button class="btn px-3 btn-outline">Win Rate</button>
                         </div>
