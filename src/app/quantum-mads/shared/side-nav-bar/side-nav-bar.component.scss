@@ -31,14 +31,30 @@
 }
 
 .wrapper .sidebar div .fa {
-    width: 30px;
     text-align: center;
 }
 
 .wrapper .sidebar div:hover {
     color: #fff;
+    cursor: pointer;
 }
 
-.clr {
+.color {
     color: #ec3aa4 !important;
+}
+
+.dashboard-btn {
+    height: 35px;
+    width: 40px;
+    background: rgb(19, 161, 179);
+    background: linear-gradient( 312deg, rgba(19, 161, 179, 1) 12%, rgba(204, 73, 166, 1) 87%);
+    border-radius: 0px 5px 4px 0px;
+}
+
+.dashboard-btn {
+    color: #fff !important;
+}
+
+small {
+    padding-left: 30px;
 }
