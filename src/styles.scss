@@ -6,10 +6,12 @@
     --text-green: #0996a0;
     --text-yellow: #f5b300;
     --text-pink: #ec3aa4;
-    --bg-color: #22272e;
+    --bg-color: #22272E;
     --bg-light-color: #37414d;
     --bg-light-color-1: #293038;
     --border-color: #494f57;
+    --nav-border-color: #292E34;
+    --topNav-exchange-color: #29303a;
 }
 
 html,
@@ -29,9 +31,9 @@ body {
 .list-country-flags {
     color: #ffff;
     background: #22272e !important;
-    margin-top: 6px !important;
+    margin-top: 16px !important;
     margin-left: -27px;
-    border: 1px solid var(--border-color) !important;
+    border: 1px solid var(--nav-border-color) !important;
     width: 113px !important;
     text-align: center;
 }

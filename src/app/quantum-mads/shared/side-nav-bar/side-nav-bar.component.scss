@@ -14,10 +14,9 @@
 
 .wrapper .sidebar {
     // width: 230px;
-    height: 100%;
+    top: 57px;
     background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    padding: 30px 0px;
+    border: 1px solid var(--nav-border-color);
     position: fixed;
 }
 
@@ -26,8 +25,7 @@
 }
 
 .wrapper .sidebar div {
-    color: #bdb8d7;
-    display: block;
+    color: var(--text-light-color);
 }
 
 .wrapper .sidebar div .fa {
@@ -48,13 +46,13 @@
     width: 40px;
     background: rgb(19, 161, 179);
     background: linear-gradient( 312deg, rgba(19, 161, 179, 1) 12%, rgba(204, 73, 166, 1) 87%);
-    border-radius: 0px 5px 4px 0px;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .dashboard-btn {
     color: #fff !important;
 }
 
-small {
-    padding-left: 30px;
-}
+// small {
+//     padding-left: 30px;
+// }
