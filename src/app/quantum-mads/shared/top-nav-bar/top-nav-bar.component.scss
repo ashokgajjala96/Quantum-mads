@@ -25,25 +25,27 @@
 }
 
 .size {
-    color: #fff;
+    // background: rgb(19, 161, 179);
+    background: linear-gradient( 312deg, rgba(204, 73, 166, 1) 12%, rgba(19, 161, 179, 1) 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 27px;
     text-align: center;
 }
 
-.fontcolor {
-    color: #eaab0b;
-    font-size: 15px;
-}
-
-.dropcolor {
-    background: #22272e;
-    color: #fff;
-}
-
+// .dropcolor {
+//     background: #22272e;
+//     color: #fff;
+// }
 .exchangeMenu:hover {
+    background: var(--topNav-exchange-color);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     .dropdown-menu {
         display: block;
-        transition: all 0.5s ease-out;
+        background: var(--topNav-exchange-color);
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+        border: 1px solid var(--nav-border-color);
+        border-top: none;
     }
 }
 
@@ -51,15 +53,33 @@
     border-bottom: unset !important;
 }
 
-tr div {
-    padding: 12px !important;
+table {
+    width: 100%;
 }
 
-tr div:hover,
-.spanactive {
-    border: 1px solid #ec3aa4;
+td {
+    color: var(--text-light-color);
+    border: 1px solid var(--border-color);
+    padding: 15px 0 15px 0;
 }
 
+td img {
+    height: 15px;
+    // width: 60px;
+}
+
+td:hover {
+    border: 1px double var(--text-pink);
+}
+
+tr:nth-child(1) td:nth-child(2) {
+    border: 1px double var(--text-pink);
+}
+
+// tr td:hover,
+// .spanactive {
+//     border: 1px solid #ec3aa4;
+// }
 .leftmenu {
     justify-content: space-between;
     position: relative;
@@ -67,24 +87,28 @@ tr div:hover,
     align-items: center;
 }
 
-.dropdown-menu {
-    width: 100%!important;
-    text-align: center;
-    background-color: unset !important;
-    margin-top: -1px;
-    border: 1px solid #494f57;
-    cursor: pointer;
-}
-
+// .dropdown-menu {
+//     width: 100% !important;
+//     text-align: center;
+//     background-color: unset !important;
+//     margin-top: -1px;
+//     border: 1px solid var(--nav-border-color);
+//     cursor: pointer;
+// }
 .default {
     color: #fff;
 }
 
 button:hover {
-    background-color: unset!important;
-    color: #ec3aa4!important;
+    background-color: unset !important;
+    color: #ec3aa4 !important;
 }
 
 .txt-cen {
     text-align: center;
+}
+
+.img-align {
+    height: 30px;
+    width: 32px;
 }

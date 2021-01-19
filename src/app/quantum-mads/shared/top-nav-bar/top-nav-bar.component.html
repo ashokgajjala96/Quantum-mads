@@ -11,54 +11,178 @@
 </nav> -->
 <style>
     .borderlines {
-        border: 1px solid #494f57;
-        height: 48px;
+        border: 1px solid var(--nav-border-color);
         cursor: pointer;
+    }
+    
+    .topNavBar {
+        background: var(--bg-color);
+        height: 48px !important;
+    }
+    
+    .toggle-checkbox {
+        display: none;
+    }
+    
+    html {
+        font-size: 62.5%;
+    }
+    
+    .toggle-checkbox {
+        display: none;
+    }
+    
+    .toggle-switch {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        background-color: #fff;
+        width: 60px;
+        height: 30px;
+        border-radius: 5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .toggle-switch::before {
+        content: "\f185";
+        font-family: "FontAwesome";
+        position: absolute;
+        background-color: #FAEE35;
+        color: #a39a18;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 1%;
+        left: 0.5%;
+        text-align: center;
+        font-size: 20px;
+        line-height: 30px;
+        transition: all 0.4s;
+        z-index: 10;
+    }
+    
+    .toggle-switch::after {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: #a39a18;
+    }
+    
+    .toggle-switch:hover {
+        cursor: pointer;
+    }
+    
+    .toggle-checkbox:checked+.toggle-switch {
+        background-color: #555;
+    }
+    
+    .toggle-checkbox:checked+.toggle-switch::before {
+        content: "\f186";
+        font-family: "FontAwesome";
+        position: absolute;
+        background-color: #fff;
+        color: #000;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 1%;
+        left: 50%;
+        text-align: center;
+        font-size: 21px;
+        line-height: 30px;
+    }
+    
+    .toggle-checkbox:checked+.toggle-switch::after {
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: capitalize;
+        color: #000;
+    }
+    
+    .toggle-checkbox:checked~.background {
+        background-color: #1B2B34;
+    }
+    
+    .icon::before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
     }
 </style>
 
 <div class="wrapper">
     <div class="container-fluid p-0 m-0 main_content">
         <div class="col-md-12">
-            <div class="row">
+            <div class="row topNavBar">
                 <div class="col-md-2 borderlines">
                     <div class="size pt-1">Q-Crypto</div>
                 </div>
-                <div class="col-md-5  py-3 borderlines exchangeMenu">
-                    <div class="d-flex">
-                        <small class="pr-2">Exchange:</small>
-                        <div class="fontcolor">
-                            <div><i class="fa fa-gg" aria-hidden="true"></i> BINANCE</div>
+                <div class="col-md-4 m-0 p-0 exchangeMenu">
+                    <div class="d-flex borderlines h-100 w-100 pt-3">
+                        <div>
+                            <small class="pl-5">Exchange:</small>
                         </div>
-                        <i class="ml-4 pt-1 fa fa-angle-down fa-lg" aria-hidden="true"></i>
+                        <div class="">
+                            <td class="p-0 m-0 border-0"><img src="../../../../assets/binance.png"></td>
+                        </div>
+                        <div>
+                            <i class="ml-4 fa fa-angle-down fa-lg" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <ul class="dropdown-menu w-100 p-0" role="menu">
-                        <div class="dropcolor">
-                            <tr class="d-flex">
-                                <div class="col p-2 spanactive">KUCOIN</div>
-                                <div class="col p-2">BINANCE</div>
-                                <div class="col p-2">Kraken</div>
-                                <div class="col p-2">Huobi</div>
-                                <div class="col p-2">Kraken</div>
-                            </tr>
-                            <tr class="d-flex">
-                                <div class="col p-2">BINANCE</div>
-                                <div class="col p-2">KUCOIN</div>
-                                <div class="col p-2">BITIFINEX</div>
-                                <div class="col p-2">Huobi</div>
-                                <div class="col p-2">KUCOIN</div>
-                            </tr>
-                            <tr class="d-flex">
-                                <div class="col p-2">Kraken</div>
-                                <div class="col p-2">Huobi</div>
-                                <div class="col p-2">BINANCE</div>
-                                <div class="col p-2">KUCOIN</div>
-                                <div class="col p-2">BITIFINEX</div>
-                            </tr>
-                        </div>
+                    <ul class="dropdown-menu m-0 w-100 p-0" role="menu">
+                        <table>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td class="spanactive"><img src="../../../../assets/HitBTC.png"></td>
+                                    <td><img src="../../../../assets/kucoin_logo.png"></td>
+                                    <td><img src="../../../../assets/bitmex.png"></td>
+                                    <td><img src="../../../../assets/binance.png"></td>
+                                    <td><img src="../../../../assets/HitBTC.png"></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../../../assets/kucoin_logo.png"></td>
+                                    <td><img src="../../../../assets/binance.png"></td>
+                                    <td><img src="../../../../assets/HitBTC.png"></td>
+                                    <td><img src="../../../../assets/bitmex.png"></td>
+                                    <td><img src="../../../../assets/kucoin_logo.png"></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../../../assets/bitmex.png"></td>
+                                    <td><img src="../../../../assets/HitBTC.png"></td>
+                                    <td><img src="../../../../assets/kucoin_logo.png"></td>
+                                    <td><img src="../../../../assets/binance.png"></td>
+                                    <td><img src="../../../../assets/bitmex.png"></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../../../assets/kucoin_logo.png"></td>
+                                    <td><img src="../../../../assets/bitmex.png"></td>
+                                    <td><img src="../../../../assets/HitBTC.png"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
                     </ul>
                 </div>
-                <div class="col-md-1 py-3 txt-cen borderlines" (mouseleave)="mouseLeave()">
+                <div class="col-md-1 pt-3 text-center borderlines">
+                    <input type='checkbox' id='toggle' class='toggle-checkbox' />
+                    <label class="toggle-switch" for='toggle'></label>
+                </div>
+                <div class="col-md-1 py-3 txt-cen  borderlines" (mouseleave)="mouseLeave()">
                     <div (mouseenter)="mouseEnter()">
                         <div class="">
                             <ngx-flag-picker [selectedCountryCode]="selectedCountryCode" [countryCodes]="countryCodes" [showFlags]="true" (changedCountryCode)="changeSelectedCountryCode($event)">
@@ -73,9 +197,8 @@
                     </div>
 
                     <div class="col-md-5 py-2 d-flex txt-color">
-                        <div class="">
-                            <img src="../../assets/unnamed.jpg" class="rounded-circle" alt="image">
-
+                        <div class="pt-1">
+                            <img src="../../assets/img.jpg" class="rounded-circle img-align" alt="image">
                         </div>
                         <div class="py-1">
                             <span class="pl-2">Jacob Moore</span>
