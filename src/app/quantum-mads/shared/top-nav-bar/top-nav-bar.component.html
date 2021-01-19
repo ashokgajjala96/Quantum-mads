@@ -1,138 +1,11 @@
-<!-- <nav class="wrapper">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Quantum-Mads</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
-        </ul>
-    </div>
-</nav> -->
-<style>
-    .borderlines {
-        border: 1px solid var(--nav-border-color);
-        cursor: pointer;
-    }
-    
-    .topNavBar {
-        background: var(--bg-color);
-        height: 48px !important;
-    }
-    
-    .toggle-checkbox {
-        display: none;
-    }
-    
-    html {
-        font-size: 62.5%;
-    }
-    
-    .toggle-checkbox {
-        display: none;
-    }
-    
-    .toggle-switch {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: block;
-        background-color: #fff;
-        width: 60px;
-        height: 30px;
-        border-radius: 5rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-    }
-    
-    .toggle-switch::before {
-        content: "\f185";
-        font-family: "FontAwesome";
-        position: absolute;
-        background-color: #FAEE35;
-        color: #a39a18;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        top: 1%;
-        left: 0.5%;
-        text-align: center;
-        font-size: 20px;
-        line-height: 30px;
-        transition: all 0.4s;
-        z-index: 10;
-    }
-    
-    .toggle-switch::after {
-        position: absolute;
-        top: 50%;
-        left: 45%;
-        transform: translateY(-50%);
-        font-size: 20px;
-        line-height: 30px;
-        text-transform: capitalize;
-        color: #a39a18;
-    }
-    
-    .toggle-switch:hover {
-        cursor: pointer;
-    }
-    
-    .toggle-checkbox:checked+.toggle-switch {
-        background-color: #555;
-    }
-    
-    .toggle-checkbox:checked+.toggle-switch::before {
-        content: "\f186";
-        font-family: "FontAwesome";
-        position: absolute;
-        background-color: #fff;
-        color: #000;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        top: 1%;
-        left: 50%;
-        text-align: center;
-        font-size: 21px;
-        line-height: 30px;
-    }
-    
-    .toggle-checkbox:checked+.toggle-switch::after {
-        position: absolute;
-        top: 50%;
-        left: 7%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        font-weight: 900;
-        text-transform: capitalize;
-        color: #000;
-    }
-    
-    .toggle-checkbox:checked~.background {
-        background-color: #1B2B34;
-    }
-    
-    .icon::before {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 900;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-    }
-</style>
-
 <div class="wrapper">
     <div class="container-fluid p-0 m-0 main_content">
         <div class="col-md-12">
-            <div class="row topNavBar">
+            <div class="row topNavBar-bgColor">
                 <div class="col-md-2 borderlines">
-                    <div class="size pt-1">Q-Crypto</div>
+                    <div class="title-size pt-1">Q-Crypto</div>
                 </div>
-                <div class="col-md-4 m-0 p-0 exchangeMenu">
+                <div class="col-md-4 m-0 p-0 exchangeMenu-dropdown">
                     <div class="d-flex borderlines h-100 w-100 pt-3">
                         <div>
                             <small class="pl-5">Exchange:</small>
@@ -182,30 +55,45 @@
                     <input type='checkbox' id='toggle' class='toggle-checkbox' />
                     <label class="toggle-switch" for='toggle'></label>
                 </div>
-                <div class="col-md-1 py-3 txt-cen  borderlines" (mouseleave)="mouseLeave()">
-                    <div (mouseenter)="mouseEnter()">
-                        <div class="">
-                            <ngx-flag-picker [selectedCountryCode]="selectedCountryCode" [countryCodes]="countryCodes" [showFlags]="true" (changedCountryCode)="changeSelectedCountryCode($event)">
-                            </ngx-flag-picker>
+                <div class="col-md-1 py-3 countryFlag borderlines">
+                    <div class="dropdown d-flex">
+                        <div class="pt-2">
+                            <img class="flag" src="/assets/eng.jpg" alt="">
                         </div>
+                        <div class="pt-2">Eng</div>
+                        <i class="ml-1 fa fa-angle-down fa-lx"></i>
                     </div>
+                    <ul class="dropdown-menu flag-list w-100 p-0 m-0">
+                        <li class="">
+                            <img class="flag" src="/assets/eng.jpg" alt=""> Eng
+                        </li>
+                        <li class="">
+                            <img class="flag" src="/assets/spa.png" alt=""> Spa
+                        </li>
+                        <li class="">
+                            <img class="flag" src="/assets/deu.png" alt=""> Deu
+                        </li>
+                        <li class="">
+                            <img class="flag" src="/assets/fra.png" alt=""> Fra
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md-4 d-flex borderlines">
-                    <div class="col-md-2 py-3 txt-color">
+                    <div class="col-md-2 py-4 txt-color">
                         <i class="fa fa-bell-o" style="position: absolute;" aria-hidden="true"></i>
                         <i class="fa fa-circle fa-sm" aria-hidden="true"></i>
                     </div>
 
                     <div class="col-md-5 py-2 d-flex txt-color">
-                        <div class="pt-1">
+                        <div class="pt-2">
                             <img src="../../assets/img.jpg" class="rounded-circle img-align" alt="image">
                         </div>
                         <div class="py-1">
-                            <span class="pl-2">Jacob Moore</span>
+                            <div class="pl-2 pt-2">Jacob Moore</div>
                         </div>
 
                     </div>
-                    <div class="py-2 pl-4">
+                    <div class="pt-3 pl-4">
                         <button class="btn btn-sm px-3 btn-outline-secondary txt-color" style="border: 1px solid;"><i class="fa fa-sign-out fa-lg mr-2" aria-hidden="true"></i>Logout</button>
                     </div>
                 </div>

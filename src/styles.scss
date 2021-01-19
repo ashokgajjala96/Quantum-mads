@@ -6,11 +6,11 @@
     --text-green: #0996a0;
     --text-yellow: #f5b300;
     --text-pink: #ec3aa4;
-    --bg-color: #22272E;
+    --bg-color: #22272e;
     --bg-light-color: #37414d;
     --bg-light-color-1: #293038;
     --border-color: #494f57;
-    --nav-border-color: #292E34;
+    --nav-border-color: #292e34;
     --topNav-exchange-color: #29303a;
 }
 
@@ -22,37 +22,14 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-body {
     background: var(--bg-color) !important;
 }
 
-.list-country-flags {
-    color: #ffff;
-    background: #22272e !important;
-    margin-top: 16px !important;
-    margin-left: -27px;
-    border: 1px solid var(--nav-border-color) !important;
-    width: 113px !important;
-    text-align: center;
+button:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
-.list-country-flags .country-flag {
-    padding: 10px !important;
-}
-
-ngx-flag-picker {
-    width: 100% !important;
-}
-
-.country-flag:hover {
-    color: #ec3aa4 !important;
-}
-
-// .country-flag {
-//     color: #fff;
-// }
 .txt-color:hover {
     color: #ec3aa4;
 }

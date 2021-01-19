@@ -9,12 +9,11 @@
 .wrapper {
     display: flex;
     position: relative;
-    // background-color: #f3f5f9;
 }
 
 .wrapper .sidebar {
-    // width: 230px;
     top: 57px;
+    height: -webkit-fill-available;
     background: var(--bg-color);
     border: 1px solid var(--nav-border-color);
     position: fixed;
@@ -52,7 +51,3 @@
 .dashboard-btn {
     color: #fff !important;
 }
-
-// small {
-//     padding-left: 30px;
-// }
