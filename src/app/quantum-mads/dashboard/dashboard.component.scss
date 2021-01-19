@@ -108,15 +108,15 @@ p {
 // }
 
 .btn-outline {
-  color: var(--text-light-color);
+  color: #627186;
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   letter-spacing: 0.1;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18.4px;
+  // font-style: normal;
+  font-weight:500;
+  // line-height: 18.4px;
 }
 
 // .btn-outline:focus {
