@@ -1,24 +1,23 @@
-<div class="ml-4 mt-4    mr-5 pr-4">
+<div class="ml-4 mt-4 mr-5 pr-4">
     <div class="row mx-1 p-0 my-3">
-        <h5 class="my-auto layout-name">Project Name</h5>
+        <h5 class="my-auto layout-title">Project Name</h5>
         <div class='ml-auto d-flex '>
             <div class="my-auto d-flex mr-5">
-                
-                    <i class="fa fa-circle fa-md price-color" aria-hidden="true"></i>
-                    <p class='light-color1 layout-header'>Balance:
-                        <span class='text-white ml-2'>22.39408983 / </span><span class="price-color">$352,556.05</span></p>
-          
-                
+                <i class="fa fa-circle 
+                fa-md green-color" aria-hidden="true"></i>
+                <p class='light-color1 layout-header'>Balance:
+                    <span class='text-white ml-2'>22.39408983 / </span><span class="green-color">$352,556.05</span>
+                </p>
             </div>
             <div>
                 <div class="dropdown ">
-                    <button class="btn btc-menu layout-header" type="button" id="dropdownMenuButton"
+                    <button #btc_menu class="btn btc-menu layout-header" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleBitcoin()"
-                        [class.btn-menu-active]="isBitcoinActive">
-                        <img src="/assets/bitcoin.png" alt=""> BTC - Bitcoin<i class="fa fa-angle-down fa-lg  ml-80px"
+                        [ngClass]="{'btn-menu-active':isBitcoinActive}">
+                        <img src="/assets/bitcoin.png" alt=""> BTC - Bitcoin<i class="fa fa-angle-down fa-lg  ml-100px"
                             aria-hidden="true"></i>
                     </button>
-                    <ul class="dropdown-menu btc-menu-list layout-header" aria-labelledby="dropdownMenuButton" (click)="toggleBitcoin()">
+                    <ul class="dropdown-menu btc-menu-list layout-header" aria-labelledby="dropdownMenuButton">
                         <li class="dropdown-item ">
                             <img src="/assets/ethereum.png" alt=""> ETH - Ethereum
                         </li>
@@ -48,30 +47,32 @@
             </div>
         </div>
     </div>
-    <div class=" row  mx-1 card chart-card">
+    <div class=" row  mx-1 card ">
         <div class="card-body">
             <div class="row d-flex justify-content-between mx-1">
                 <div class="text-white ">
-                  <small>
-                    <i class="fa fa-dot-circle-o price-color mr-1" aria-hidden="true"></i> Strategy N<sup><u>o</u></sup>1
-                  </small>  
+                    <small>
+                        <i class="fa fa-dot-circle-o green-color mr-1" aria-hidden="true"></i> Strategy
+                        N<sup><u>o</u></sup>1
+                    </small>
                 </div>
                 <div class='d-flex'>
-                    <div class="chart-header-content">
-                        <p class="font-style">Investment</p>
-                        <p class="price-color">$135.00</p>
+                    <div class="chart-header">
+                        <p>Investment</p>
+                        <p class="green-color">$135.00</p>
                     </div>
-                    <div class="chart-header-content">
+                    <div class="chart-header">
                         <p>Profit</p>
-                        <p class="price-color">+$135.00</p>
+                        <p class="green-color">+$135.00</p>
                     </div>
-                    <div class="chart-header-content">
+                    <div class="chart-header">
                         <p>ROI</p>
-                        <p class="price-color">+%17.0</p>
+                        <p class="green-color">+%17.0</p>
                     </div>
                     <div class='mr-3'>
                         <div class="btn-group">
-                            <button class="btn px-4  btn-outline profit_loss" aria-current="profit and loss" autofocus>Profit and
+                            <button class="btn px-4  btn-outline profit_loss" aria-current="profit and loss"
+                                autofocus>Profit and
                                 Loss</button>
                             <button class="btn px-3 btn-outline">Win Rate</button>
                         </div>
@@ -94,8 +95,8 @@
                         </div>
                     </div>
                     <div class="">
-                        <button class="btn  btn-outline mr-05 pr-5">34</button>
-                        <button class="btn  btn-outline mr-05"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                        <button class="btn  btn-outline mr-2px pr-5">34</button>
+                        <button class="btn  btn-outline mr-2px"><i class="fa fa-minus" aria-hidden="true"></i></button>
                         <button class="btn  btn-outline "><i class="fa fa-plus" aria-hidden="true"></i></button>
                     </div>
                 </div>
@@ -111,14 +112,14 @@
     </div>
 
     <div class="row mt-5 mx-1">
-        <h6 class='layout-name'>Transaction table</h6>
+        <h6 class='layout-title'>Transaction table</h6>
         <table class="table-borderless">
             <thead>
                 <tr>
                     <th class='pl-4'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Timestamp</th>
                     <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Executed Path</th>
                     <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Lot Size</th>
-                    <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Pnl</th>
+                    <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>PnL</th>
                     <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Return</th>
                     <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Commisions</th>
                     <th class='pl-3'><i class="fa fa-circle fa-sm" aria-hidden="true"></i>Graph Creation</th>
@@ -140,14 +141,15 @@
                     <td>
                         1ETH
                     </td>
-                    <td class='price-color'>
+                    <td class='green-color'>
                         1,5 ETH = +,5 ETH
                     </td>
-                    <td class="price-color">0,5 %</td>
+                    <td class="green-color">0,5 %</td>
                     <td>0.03 + 0.02 + 0.02</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+
                 </tr>
                 <tr>
                     <td>
@@ -168,9 +170,10 @@
                     </td>
                     <td class="pink-color">0,5 %</td>
                     <td>@0.03 + 0.02 + 0.02</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+
                 </tr>
                 <tr>
                     <td>
@@ -185,14 +188,15 @@
                     <td>
                         1ETH
                     </td>
-                    <td class='price-color'>
+                    <td class='green-color'>
                         1,5 ETH = +,5 ETH
                     </td>
-                    <td class="price-color">0,5 %</td>
+                    <td class="green-color">0,5 %</td>
                     <td>@0.03 + 0.02 + 0.02</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
-                    <td>0.5 sec</td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+                    <td>0.5 <span class='sec'> sec </span> </td>
+
                 </tr>
 
 
@@ -200,4 +204,3 @@
         </table>
     </div>
 </div>
-

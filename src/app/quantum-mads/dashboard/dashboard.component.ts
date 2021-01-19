@@ -1,5 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import * as moment from 'moment';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
+import * as moment from "moment";
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -10,7 +16,7 @@ import {
   ApexGrid,
   ApexAnnotations,
   ApexPlotOptions,
-} from 'ng-apexcharts';
+} from "ng-apexcharts";
 export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
@@ -22,21 +28,26 @@ export type ChartOptions = {
   plotOptions: ApexPlotOptions;
 };
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.scss"],
 })
-
 export class DashboardComponent implements OnInit {
-  @ViewChild('chart') chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
-  public isBitcoinActive=false;
+  public isBitcoinActive = false;
+  @ViewChild("btc_menu") btcMenu: ElementRef;
+  @HostListener("document:click", ["$event.target"])
+  public onClick(target) {
+    if (target && !this.btcMenu.nativeElement.contains(target))
+      this.isBitcoinActive = false;
+  }
   constructor() {
     this.chartOptions = {
       series: [
         {
-          name: 'candle',
+          name: "candle",
           data: [
             // {
             //   x: new Date(1590778600000),
@@ -282,26 +293,27 @@ export class DashboardComponent implements OnInit {
         },
       ],
       chart: {
-        type: 'candlestick',
+        type: "candlestick",
         height: 350,
         toolbar: {
           show: false,
         },
-        foreColor: '#808F9E',
+        foreColor: "#808F9E",
       },
       xaxis: {
-        tooltip:{
-          enabled:false,
+        tooltip: {
+          enabled: false,
         },
-        type: 'datetime',
+        type: "datetime",
         labels: {
-          // formatter: function (val) {
-          //   return moment(val).format('LT');
-          // },
+          formatter: function (val,timestamp) {
+            return moment(timestamp).format('HH');
+          },
         },
         min: 1590778600000,
         max: 1590884800000,
-        tickAmount : 6
+        tickAmount: 6,
+       
       },
 
       yaxis: {
@@ -315,7 +327,7 @@ export class DashboardComponent implements OnInit {
       },
       grid: {
         show: true,
-        borderColor: '#2D343B',
+        borderColor: "#2D343B",
         padding: {
           bottom: 16,
         },
@@ -324,30 +336,51 @@ export class DashboardComponent implements OnInit {
         yaxis: [
           {
             y: 6518,
-            borderColor: '#E4E5E6',
+            strokeDashArray: 10,
+            borderColor: "#E4E5E6",
           },
           {
             y: 6507,
-            borderColor: '#ec3aa4',
+            strokeDashArray: 10,
+            borderColor: "#ec3aa4",
           },
           {
             y: 6480,
-            borderColor: ' #0996a0',
+            strokeDashArray: 10,
+            borderColor: " #0996a0",
+          },
+        ],
+        xaxis: [
+          {
+            x: 1590875800000,
+            borderColor: "#775DD0",
+            label: {
+              text: moment(1590875800000).format('HH:mm:ss'),
+              position: "bottom",
+              orientation: "horizontal",
+              offsetY: 25,
+              style: {
+                background: "#293038",
+                color: "#808f9e",
+                fontSize: '12px',
+                fontWeight: 400,
+                fontFamily: 'inherit',
+              },
+            },
           },
         ],
       },
       plotOptions: {
         candlestick: {
           colors: {
-            upward: '#ec3aa4',
-            downward: '#03c077',
+            upward: "#ec3aa4",
+            downward: "#03c077",
           },
           wick: {
             useFillColor: true,
           },
         },
       },
-      
     };
   }
   public generateDayWiseTimeSeries(baseval, count, yrange) {
@@ -364,9 +397,8 @@ export class DashboardComponent implements OnInit {
     return series;
   }
 
-public toggleBitcoin(){
-  this.isBitcoinActive= ! this.isBitcoinActive;
-}
+  public toggleBitcoin() {
+    this.isBitcoinActive = !this.isBitcoinActive;
+  }
   ngOnInit(): void {}
 }
-
