@@ -118,7 +118,7 @@ button:hover {
     padding: 7px;
     padding-left: 14px;
     font-family: "Open Sans", sans-serif;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .flag-list li:hover {
@@ -261,4 +261,15 @@ html {
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
+}
+
+.image-align {
+    position: relative;
+}
+
+.font-circle {
+    position: absolute;
+    top: 2px;
+    right: 350px;
+    color: var(--text-pink);
 }
