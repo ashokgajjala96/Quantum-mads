@@ -353,7 +353,7 @@ export class DashboardComponent implements OnInit {
         xaxis: [
           {
             x: 1590875800000,
-            borderColor: "#775DD0",
+            borderColor: "#808f9e",
             label: {
               text: moment(1590875800000).format('HH:mm:ss'),
               position: "bottom",

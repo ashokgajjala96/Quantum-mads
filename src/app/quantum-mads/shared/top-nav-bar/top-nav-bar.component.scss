@@ -141,7 +141,7 @@ button:hover {
 
 .countryFlag {
     font-family: "Open Sans", sans-serif;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .countryFlag:hover {
@@ -187,15 +187,15 @@ html {
     position: absolute;
     background-color: #faee35;
     color: #a39a18;
-    width: 20px;
-    height: 21px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     /* border: 1px solid var(--nav-border-color); */
     top: -10%;
     left: 0.5%;
     text-align: center;
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 23px;
     transition: all 0.4s;
     z-index: 10;
 }
@@ -226,14 +226,14 @@ html {
     background-color: #fff;
     color: #000;
     width: 23px;
-    height: 21px;
+    height: 23px;
     border-radius: 50%;
     border: 1px solid var(--nav-border-color);
     top: -10%;
     left: 50%;
     text-align: center;
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 21px;
 }
 
 .toggle-checkbox:checked+.toggle-switch::after {

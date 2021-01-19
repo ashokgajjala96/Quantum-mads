@@ -119,11 +119,15 @@ p {
   line-height: 18.4px;
 }
 
-.btn-outline:focus {
-  border: 1px solid var(--text-green);
-}
+// .btn-outline:focus {
+//   border: 1px solid var(--text-green);
+// }
 .profit_loss {
   border: 1px double var(--text-green);
+}
+.active_btn{
+  color: var(--text-shadow-color) !important;
+  font-weight:200;
 }
 
 // Transaction Table
